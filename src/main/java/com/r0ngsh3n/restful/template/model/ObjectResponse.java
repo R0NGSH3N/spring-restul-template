@@ -8,6 +8,18 @@ public class ObjectResponse<T> {
     //return data
     private T data;
 
+    public int getCode() {
+        return code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public T getData() {
+        return data;
+    }
+
     public ObjectResponse(T data) {
         this(1000, "success", data);
     }

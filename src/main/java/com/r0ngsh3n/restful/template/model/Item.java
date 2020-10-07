@@ -4,11 +4,11 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "ITEM")
+@Table(name = "item")
 @Embeddable
 public class Item {
 
-    @javax.persistence.Id
+    @Id
     @GeneratedValue
     Long Id;
 

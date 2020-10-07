@@ -7,8 +7,8 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
-@Table(name = "USER")
-@NamedQuery(name = "User.findByEmail", query = "Select u from USER where u.email = ?1")
+@Table(name = "user")
+//@NamedQuery(name = "User.findByEmail", query = "Select u from user where u.email = ?1")
 public class User {
     @Id @GeneratedValue
     Long Id;
@@ -34,6 +34,14 @@ public class User {
 
     public void setItems(List<Item> items) {
         this.items = items;
+    }
+
+    public void setId(Long id) {
+        Id = id;
+    }
+
+    public Long getId() {
+        return Id;
     }
 
     @ElementCollection
